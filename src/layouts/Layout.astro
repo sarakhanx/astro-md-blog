@@ -1,21 +1,23 @@
 ---
 interface Props {
 	title: string;
+	description: string;
+	slug: string;
 }
 
-const { title } = Astro.props;
+const { title, description, slug } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<meta property="og:image" content="https://media.licdn.com/dms/image/C4E12AQGEy0nHsryvOg/article-cover_image-shrink_720_1280/0/1561242730098?e=2147483647&v=beta&t=Zvez_D5lTF6HeyMW9_KSObThHV1sRQY62sQo-QXyuRk" />
+		<meta property="og:image" content={slug} />
 	</head>
 	<body>
 		<slot />
