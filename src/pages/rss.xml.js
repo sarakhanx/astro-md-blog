@@ -1,18 +1,16 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
+import { formatBlogPosts } from '../utils/blog';
 
 export async function GET(context) {
-  const posts = await Astro.glob('./blog/*.{md,mdx}');
+  const blog = await getCollection('blog');
+  const posts = formatBlogPosts(blog);
+
   return rss({
     title: 'Your Blog Title',
     description: 'Your blog description',
     site: context.site,
-    items: posts.map((post) => ({
-      title: post.frontmatter.title,
-      pubDate: new Date(post.frontmatter.date),
-      description: post.frontmatter.description,
-      link: `/blog/${post.file.split('/').pop().split('.')[0]}/`,
-    })),
+    items: posts,
     customData: `<language>en-us</language>`,
   });
 }
