@@ -1,9 +1,13 @@
 ---
 import Layout from './Layout.astro';
 import { format } from 'date-fns';
+import { Code } from 'astro/components';
+import { ArrowLeft } from 'lucide-react';
 
-const { frontmatter } = Astro.props;
-const ogImageUrl = frontmatter.slug
+
+
+const { frontmatter, content } = Astro.props;
+const ogImageUrl = frontmatter.slug;
 ---
 
 <Layout title={frontmatter.title} description={frontmatter.description} slug={ogImageUrl}>
@@ -15,32 +19,123 @@ const ogImageUrl = frontmatter.slug
     <meta name="twitter:image" content={ogImageUrl} />
   </head>
   <article class="blog-post">
-    <h1>{frontmatter.title}</h1>
-    <div class="metadata">
-      <time datetime={frontmatter.date}>
-        {format(new Date(frontmatter.date), 'MMMM d, yyyy')}
-      </time>
-      {frontmatter.author && <span> • By {frontmatter.author}</span>}
+    <div class="title-bar">
+      <div class="dot red"></div>
+      <div class="dot yellow"></div>
+      <div class="dot green"></div>
+      <h1>{frontmatter.title}</h1>
     </div>
-    <slot />
+    <div class="content">
+      <a href="/astro-md-blog" class="back-button">
+        <ArrowLeft className="w-4 h-4 mr-2" />
+        Back
+      </a>
+      <div class="metadata">
+        <Code code={`const publishDate = "${format(new Date(frontmatter.date), 'yyyy-MM-dd')}";`} />
+        {frontmatter.author && <Code code={`const author = "${frontmatter.author}";`} />}
+      </div>
+      <slot />
+    </div>
+
   </article>
 </Layout>
 
 <style>
   .blog-post {
-    max-width: 65ch;
-    margin: 0 auto;
+    max-width: 80ch;
+    margin: 2rem auto;
+    background-color: #36393f;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .title-bar {
+    background-color: #2f3136;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+  }
+
+  .red { background-color: #ff5f56; }
+  .yellow { background-color: #ffbd2e; }
+  .green { background-color: #27c93f; }
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 0 0 0 1rem;
+    color: #ffffff;
+    font-family: 'Fira Code', monospace;
+  }
+
+  .content {
     padding: 2rem;
   }
 
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    color: white;
+  .back-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #4f545c;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    margin-bottom: 1rem;
+  }
+
+  .back-button:hover {
+    background-color: #5865f2;
   }
 
   .metadata {
-    color: #94a3b8;
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  :global(.metadata code) {
+    background-color: #2f3136;
+    color: #8e9297;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+
+  :global(p) {
+    color: #dcddde;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  :global(a) {
+    color: #00b0f4;
+    text-decoration: none;
+  }
+
+  :global(a:hover) {
+    text-decoration: underline;
+  }
+
+  :global(pre) {
+    background-color: #2f3136;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+  }
+
+  :global(code) {
+    font-family: 'Fira Code', monospace;
   }
 </style>
+
