@@ -4,6 +4,7 @@ title: Hello, World!
 date: 2024-03-21
 author: Your Name
 description: Welcome to my new Astro blog!
+slug: "hello-world"
 ---
 
 # Hello, World!
