@@ -2,8 +2,8 @@
 layout: ../../layouts/BlogPost.astro
 title: TEST
 date: 2024-03-21
-author: Your Name
-description: Welcome to my new Astro blog!
+author: Whale-hundrid
+description: ลองเปลี่ยนดูอีกทีสิ๊
 ---
 
-## TEST
+## TEST AGAIN
