@@ -1,55 +1,96 @@
-# Astro Starter Kit: Basics
+# 🌟 My Entire Note & Resume
 
-```sh
-npm create astro@latest -- --template basics
-```
+> 🚀 A super cool blog + resume website built with Astro! Show off your skills and thoughts in style~
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## ✨ Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- 🎨 **Dark/Light Mode** - เปลี่ยนธีมได้ตามใจชอบ!
+- 📱 **Responsive Design** - ดูดีในทุกขนาดหน้าจอ
+- ⚡️ **Super Fast** - Built with Astro = เว็บไซต์เร็วแบบสายฟ้าแลบ
+- 📝 **Markdown Support** - เขียนบล็อกง่ายๆ ด้วย Markdown
+- 🖨️ **Print-friendly Resume** - พิมพ์ Resume สวยๆ ได้เลย
+- 🎯 **Interactive Resume** - คลิกเลือกส่วนที่จะแสดงใน Resume ได้!
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 🛠️ Tech Stack
 
-## 🚀 Project Structure
+- [Astro](https://astro.build) - Web Framework สุดเจ๋ง
+- [TypeScript](https://www.typescriptlang.org/) - JavaScript with superpowers
+- [Tailwind CSS](https://tailwindcss.com) - Styling แบบ Utility-first
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🚀 Quick Start
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+\`\`\`bash
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+# Clone โปรเจ็ค
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+git clone <https://github.com/your-username/astro-md-blog.git>
 
-Any static assets, like images, can be placed in the `public/` directory.
+# ติดตั้ง Dependencies
 
-## 🧞 Commands
+npm install
 
-All commands are run from the root of the project, from a terminal:
+# รัน Development Server
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+npm run dev
+\`\`\`
 
-## 👀 Want to learn more?
+## 📝 How to Use
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-# astro-md-blog
+1. **เขียนบล็อก**: สร้างไฟล์ `.md` หรือ `.mdx` ใน `src/pages/blog/`
+2. **แก้ไข Resume**: อัพเดทข้อมูลใน `src/pages/resume.astro`
+3. **Dark/Light Mode**: กดปุ่มเปลี่ยนธีมที่มุมบนขวา
+4. **Print Resume**:
+   - เข้าไปที่หน้า Resume
+   - คลิกเลือกส่วนที่ต้องการแสดง
+   - กดปุ่ม Print!
+
+## 🎨 Customization
+
+แก้ไขสไตล์ได้ที่:
+
+- 🎯 `src/layouts/` - เลย์เอาท์หลัก
+- 🎨 `src/styles/` - Global styles
+- 🧩 `src/components/` - UI Components
+
+## 📱 Screenshots
+
+[ใส่รูป Screenshots ของเว็บไซต์ตรงนี้]
+
+## 🤝 Contributing
+
+มาช่วยกันพัฒนาโปรเจ็คนี้! PRs are welcome! 🙌
+
+## 📄 License
+
+MIT License - ใช้ฟรี แจกฟรี! 🎉
+
+---
+
+Made with ❤️ by [Your Name]
+
+## ✍️ Markdown Shortcuts
+
+> 💡 รวม Shortcuts สำหรับเขียน Markdown แบบเทพๆ!
+
+| Element | Shortcut | ผลลัพธ์ |
+|---------|----------|---------|
+| หัวข้อ | `# หัวข้อ` | <h1>หัวข้อ</h1> |
+| ตัวหนา | `**ข้อความ**` | **ข้อความ** |
+| ตัวเอียง | `*ข้อความ*` | *ข้อความ* |
+| ขีดฆ่า | `~~ข้อความ~~` | ~~ข้อความ~~ |
+| Link | `[ชื่อ](url)` | [ลิงก์](https://example.com) |
+| รูปภาพ | `![alt](url)` | ![รูป](url) |
+| Code | \`code\` | `code` |
+| Code Block | \`\`\`language<br>code<br>\`\`\` | ```js<br>code```|
+| List | `- item` หรือ `1. item` | • item |
+| Checkbox | `- [ ]` หรือ `- [x]` | ☐ หรือ ☑ |
+| Quote | `> quote` | > quote |
+| Table | `\|col1\|col2\|`<br>`\|-\|-\|` | ตารางแบบนี้! |
+| Line Break | `---` | เส้นคั่นแบบนี้ ⬇️ |
+
+---
+
+💡 **Tips**: 
+- กด `Ctrl/Cmd + B` = **ตัวหนา**
+- กด `Ctrl/Cmd + I` = *ตัวเอียง*
+- กด `Ctrl/Cmd + K` = [สร้างลิงก์]()
