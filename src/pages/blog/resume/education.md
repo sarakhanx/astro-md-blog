@@ -1,11 +1,11 @@
 ---
-title: "Computer Science Degree"
-category: "education"
-degree: "Bachelor's in Computer Science"
-school: "Your University"
-year: "2018 - 2022"
-gpa: "3.50"
-date: "2023-11-29"
+title: Information Communication and Technologies
+category: education
+degree: Bachelor's in Science Information Communication and Technologies
+school: Sukhothai Thummatirath Open University (STOU)
+year: 2021 - 2023(breaked)
+gpa: 2.74( 20/24 subjects)
+date: 2024-11-29
 ---
 
 Studied Computer Science with a focus on software development and algorithms.
