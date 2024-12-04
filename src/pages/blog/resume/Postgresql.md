@@ -1,10 +1,10 @@
 ---
-title: JavaScript & TypeScript
+title: Postgresql
 category: skills
-type: language
-level: Efficiently
-years: 4
-date: 2023-11-29
+type: tool
+level: Strong
+years: 3
+date: 2024-12-04
 ---
 
 Advanced JavaScript programming including ES6+ features, async/await, and functional programming.
